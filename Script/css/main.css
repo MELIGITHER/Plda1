@@ -1,0 +1,342 @@
+/*
+  .pelda => class selector
+  #pelda => ID selector 
+ 
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Exo 2');
+
+/* $footer-height: 200px; */
+html {
+    position: relative;
+	hight: 100%;
+    padding-bottom:200px;   /* Height of the footer */
+   
+}
+
+@font-face {
+  font-family: myFirstFont;    
+  font-color: rgb(128,0,128);
+  font-style: oblique;
+  font-weight: 800;
+  
+  src: url('/css/fonts/exo-2-v7-latin-regular.woff');format('woff');
+
+ /* src: url('/css/fonts/exo-2-v7-latin-regular.eot'); /* IE9 Compat Modes */
+ /* src: 
+       url('/css/fonts/exo-2-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  /*     url('/css/fonts/exo-2-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  /*     url('/css/fonts/exo-2-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+   /*    url('/css/fonts/exo-2-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+   /*    url('/css/fonts/exo-2-v7-latin-regular.svg#Exo2') format('svg'); /* Legacy iOS */
+}
+
+
+
+.page-header  { 
+ /* background-image: url('tulip.jpg');  The image used */
+  background-color:rgb(128,0,128);  /* Used if the image is unavailable #FF2000;*/
+  background-repeat:repeat-x;
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center; /* Center the image */
+  top:0;
+  width: 100%;
+} 
+
+.container-fluid {
+	 position: relative;
+     right: 0;
+	 left : 0;
+     width: 100%;
+	 hight: 100%;
+	 botton:0;
+     padding-right: 0px;
+     padding-left: 0px;
+	/* background-image: url("https://srilankafoundation.org/wp-content/uploads/2016/07/Beach.jpg") ;  */
+   /*	background-image: url('/css/images/tulipan.jpg');  */
+ 	 background-color:rgb(193,203,93);  
+    
+}
+
+
+
+.page-footer {
+/* clear: both; */
+	position: absolute;
+	bottom:0px; 
+	width: 100%;
+	hight: 200px;/* Height of the footer */
+	right: 0;
+	left : 0;	
+	background-color:  rgb(129, 240, 136);
+	text-align: center;
+	font-color: rgb(175, 167, 166);
+	border-top: 5px solid  rgb(175, 167, 166);
+	padding-top: 20px;
+	margin-top: 20px;
+}
+
+
+
+/*---------------------*/
+
+
+.row {
+     display: -ms-flexbox;
+      display: flex; 
+     -ms-flex-wrap: wrap;
+     flex-wrap: wrap;
+     margin-right: 0px;
+     margin-left: 0px;
+	 justify-content: space-around;  /* Then we define how is distributed the remaining space */
+	 margin-top:1rem;
+	list-style: center;
+
+}
+.row1 {
+     display: -ms-flexbox;
+     display: flex;
+     -ms-flex-wrap: wrap;
+     flex-wrap: wrap;
+     margin-right: 0px;
+     margin-left: 0px;
+	 justify-content: space-start;
+
+}
+.row2 {
+     display: grid;
+	 grid-template-columns: 1fr auto 1fr; /* Three columns, one three times as wide as the others */
+	 padding: 10px;
+	/* background-color: #2196F3; */
+
+}
+.row2-grid-item1 {
+/*  background-color: rgba(255, 255, 255, 0.8);*/
+/*  border: 1px solid rgba(0, 0, 0, 0.8);*/
+  padding-left: 100px;
+  padding-top:50px;
+  grid-column-gap: 10px;
+}
+.row2-grid-item2 {
+ /* background-color: rgba(255, 255, 255, 0.8);*/
+ /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  padding: 10px;
+}
+.col {
+     -ms-flex-preferred-size: 0;
+     flex-basis: 0;
+     -ms-flex-positive: 1;
+     flex-grow: 1;
+     max-width: 100%;
+  
+
+}
+
+.napraforgo1 {
+		-webkit-animation: forog 3s infinite linear;/* Safari and Chrome */
+		-ms-animation: forog 2s infinite linear;/* IE 9 */
+		animation: forog 2s infinite linear;
+        display: block;
+}
+
+.napraforgo2 {
+		-webkit-animation: forog 3s infinite linear;/* Safari and Chrome */
+		-ms-animation: forog 2s infinite linear;/* IE 9 */
+		animation: forog 2s infinite linear;
+        display: block;
+}
+
+
+@-webkit-keyframes forog {
+		0% { -webkit-transform: rotate(0deg);
+			 -webkit-transform-origin: 50% 50% 0; }
+		100% {-webkit-transform: rotate(359deg);
+			  -webkit-transform-origin: 50% 50% 0;}
+}
+
+@-ms-keyframes forog {
+		0% { -ms-transform: rotate(0deg); 
+			 -ms-transform-origin: 50% 50%;}
+		100% { -ms-transform: rotate(0deg); 
+			   -ms-transform-origin: 50% 50%;}
+}
+@-keyframes forog {
+	0% { transform: rotate(0deg);
+		 transform-origin: 50% 50% 0;}
+	100% { transform: rotate(360deg);
+		   transform-origin: 50% 50% 0;}
+} 
+
+#grid {
+	background-color: rgb(255,253,150);
+}
+
+
+#napraforgo {
+	width:  200px;
+	height:  250px;	
+	margin: 40;
+	transition: transform 0.5s;
+	
+}
+#napraforgo:hover {
+ 
+  -webkit-transform: rotate(360deg); /* Safari */
+ 
+   transform: rotate(45deg) scale(0.5);
+  
+
+  /* transform-origin:  50% 50%; */
+  /* -webkit-transform-origin: 200px 150px; center center;*/
+
+  /*transform:  matrix(0, -40deg, 40deg, 0, 0, 0);/* matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())*/
+
+
+}
+
+.img-tulip1 {
+ 	
+	margin: 40;
+	width:  250px;
+	height:  250px;	
+	transition: transform 0.5s;
+}
+
+
+#item1:hover> .img-tulip1 {
+ 
+  -webkit-transform: rotate(360deg); /* Safari & Chrome */
+  transform:  rotate(1080deg);
+  transform-origin: 50% 50%; 
+ 
+}
+/******** card elemei*******/
+.elolap,.hatlap{
+	width:  200px;
+	height:  250px;	
+	margin: auto;
+	overflow: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	transition: transform .2s linear;
+}
+
+.elolap{
+	transform: perspective(600px) rotateY(0deg);
+}
+
+.hatlap{
+	 
+	transform: perspective(600px) rotateY(180deg);
+}
+
+
+#card:hover  > .elolap{
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+#card:hover> .hatlap{
+  transform: perspective(600px) rotateY(0deg);
+}
+
+
+
+#item3 {
+	margin: auto;
+}
+
+#btn-send:hover {
+	border:1px solid #fff; 
+	background:#ffdb3a; 
+	color:#000; 
+}
+
+
+
+/*--- navigation bar ---*/ 
+ 
+.navbar { 
+  background:#6ab446; 
+} 
+ 
+.nav-link, 
+.navbar-brand { 
+  color: #fff; 
+  cursor: pointer; 
+} 
+ 
+.nav-link { 
+  margin-right: 1em !important; 
+} 
+ 
+.nav-link:hover { 
+  color: #000; 
+} 
+ 
+.navbar-collapse { 
+  justify-content: flex-end; 
+} 
+
+
+
+#description { 
+  left: 0%; 
+  position: relative; 
+  top: 0%;   
+  text-align: center; 
+} 
+ 
+#description h1 { 
+	color: #1ab446; 
+	  color: white; 
+   text-shadow: 1px 1px #fe4902, 
+                2px 2px #fe4902, 
+                3px 3px #fe4902;
+
+} 
+
+
+
+#description h1:hover { 
+	color: #000446; 
+ 	top: -3px; 
+   	left: -3px; 
+   	text-shadow: 1px 1px #fe4902, 
+                	2px 2px #fe4902, 
+                	3px 3px #fe4902, 
+                	4px 4px #fe4902, 
+                	5px 5px #fe4902, 
+                	6px 6px #fe4902;
+
+} 
+ 
+#description p { 
+  color: #fff; 
+  font-size: 0.3rem; 
+  line-height: 0.5; 
+} 
+
+
+#description button { 
+  border:1px solid #6ab446; 
+  background:#6ab446; 
+  border-radius: 1; 
+  color:#fff; 
+} 
+ 
+#description button:hover { 
+  border:1px solid #fff; 
+  background:#ffdb3a; 
+  color:#000; 
+} 
+
+
+
+
+
+
+
+
+
+
+
