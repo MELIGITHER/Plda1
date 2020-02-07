@@ -1,6 +1,9 @@
 {
   "name": "Plda1",
   "version": "1.0.0",
+  "engines": {
+    "node": "v12.13.0"
+  }
   "description": "",
   "main": "index.js",
   "scripts": {
