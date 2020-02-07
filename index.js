@@ -4,7 +4,7 @@ const app = express();
 const path = require('path');
 const router = express.Router();
 var iso88592 = require('iso-8859-2');
-const utf8 = require('utf8');
+//const utf8 = require('utf8');
 
 app.use(express.static(__dirname + '/Script'));
 //Store all JS and CSS in Scripts folder.In css/images- all images
