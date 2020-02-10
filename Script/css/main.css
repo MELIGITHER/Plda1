@@ -105,7 +105,7 @@ html {
 }
 .row2 {
      display: grid;
-	 grid-template-columns: 1fr auto 1fr; /* Three columns, one three times as wide as the others */
+	 grid-template-columns: 1fr 1fr 1fr; /* Three columns, one three times as wide as the others */
 	 padding: 10px;
 	/* background-color: #2196F3; */
 
