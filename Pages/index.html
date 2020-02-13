@@ -16,6 +16,7 @@
 </head>
 
 <header class="page-header header container-fluid"> 
+
 <body>
   <nav class="navbar navbar-expand-md"> 
   <a class="navbar-brand" href="#">Logo</a> 
@@ -53,13 +54,17 @@
     </ul> 
   </div> 
  </nav> 
-</body>
  
+</body>
+
 </header> 
 
 <div  class="container-fluid"> 
+
 <body>
+
  <div class="row1" style='height :100px'>
+
   <div class="col-lg-3 "> 
 
 	<div id="overlay" onclick="off()"></div>
@@ -77,6 +82,7 @@
 			</script>
 	</div>
  </div>
+ 
 <div id="grid">
 
  <div  class="row2" style='height :250px'>	
@@ -110,7 +116,11 @@
      </div>	 
   </div>	 	 
 </div> 
+
+
 <div  class="row" >  
+
+ 
    <div  id="napraforgo" class="col-mg-3"> 
 		<div class="forog"> 
 			<img src="/css/images/f_tulip.jpg" class="img-fluid" style="border-radius:50%";> 
@@ -146,12 +156,46 @@
 			<input id="btn-send" type="submit" class="btn btn-secondary btn-block" value="Send" name=""> 	
 	</div> 
 </div> 
-</div> 
+
+
 </body>
 </div>
 
-<footer class="page-footer footer container-fluid">
-    <div class="row"> 
+<footer id="page-footer" class="page-footer footer container-fluid">
+  <script>
+$(function() {
+  var body = $('#page-footer'),
+      template = $('.template.shine'),
+      stars =  500,
+      sparkle = 20;
+  
+    
+  var size = 'small';
+  var createStar = function() {
+    template.clone().removeAttr('id').css({
+      top: (Math.random() * 100) + '%',
+      left: (Math.random() * 100) + '%',
+      webkitAnimationDelay: (Math.random() * sparkle) + 's',
+      mozAnimationDelay: (Math.random() * sparkle) + 's'
+    }).addClass(size).appendTo(body);
+  };
+ 
+  for(var i = 0; i < stars; i++) {
+    if(i % 2 === 0) {
+      size = 'small';
+    } else if(i % 3 === 0) {
+      size = 'medium';
+    } else {
+      size = 'large';
+    }
+    
+    createStar();
+  }
+});
+</script>
+<div class="template shine"></div> 
+ <div class="row"> 
+ 
       <div class="col-lg-8 col-md-8 col-sm-12"> 
       <h6 class="text-uppercase font-weight-bold">Additional Information</h6> 
       <p>Additional Information. Additional Information. Additional Information.</p> 
@@ -165,9 +209,9 @@
       <br/>+ 01 234 567 89</p> 
     </div> 
   </div> 
-  <div class="footer-copyright text-center">ÂŠ 2019 Copyright: xxx.com</div>  
+  <div class="footer-copyright text-center"> 2019 Copyright: xxx.com</div>  
  </footer>
-
+ 
 
 
 </html>
