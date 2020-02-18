@@ -31,20 +31,58 @@
 
 
 <body>
-
-<div class="wrapper">  
-<div class="container-fluid"> 
-
-<div id="grid" class="row" >  
-   <div id="level1" class="col-mg-4">  
-	<div class="hvrbox">
-		<img src="/css/images/level.jpg"  class="img-fluid">
-		<div class="hvrbox-layer_top hvrbox-layer_scale-rotate">
-		</div>
-	</div>
-	</div>
-
+<script>
+function polig_rajz() {
+alert('xxx');
+     /*Az SVG-koordínáta rendszere más mint a matematikai. Az X bolról-> jobbra  és az Y- fentrõl lefele a 0,0 -pedig a koordináta rendszer kiínduló pontja */
+	 var oldal=50;
+	 var Lx=oldal*Math.cos(Math.PI * (60/180));
+	 var Ly=oldal*Math.sin(Math.PI * (60/180));
+	 var origX,origY;
+	 var polig=1;
+	 alert(Ly);
+	while(polig<=6){
+	 origX=50;origY=50;
+	 if (polig==1) { origX=50;origY=50;}
+	 else if(polig==2) {origX=origX+Lx+oldal; origY=origY-Ly;}
+	 else if(polig==3) {origX=origX+2*Lx+2*oldal; origY=origY;}
+	 else if(polig==4) {origX=origX+2*Lx+2*oldal; origY=origY+2*Ly;}
+	 else if(polig==5) {origX=origX+Lx+oldal; origY=origY+3*Ly;}
+	 else if(polig==6) {origX=origX; origY=origY+2*Ly;}
+	 var pontX=origX ,pontY=origY+Ly ;
+	 var pontX1=pontX+Lx ,pontY1=pontY-Ly ;	
+	 var pontX2=pontX1+oldal,pontY2=pontY1 ;
+     var pontX3=pontX2+Lx,pontY3=pontY2+Ly ;
+	 var pontX4=pontX3-Lx,pontY4=pontY3+Ly ;
+	 var pontX5=pontX4-oldal,pontY5=pontY4 ;	 
+	 if (polig==1){
+		var polig1 ='<svg width="100" height="100" viewBox="0 0 300 300">'; 
+		}
+	  polig1 =polig1+'<polygon points="'+pontX+','+pontY+' '+pontX1+','+pontY1+' '+pontX2+','+pontY2+' '+pontX3+','+pontY3+' '+pontX4+','+pontY4+' '+pontX5+','+pontY5+'"; />';
+	 if (polig==6){	
+		polig1 =polig1+
+           ' <animateTransform transform-origin="256px 256px" attributeName="transform" '+
+                    'type="rotate" '+
+                    'from="0 0 0" to="360 0 0" '+
+                    'begin="0s" dur="10s" '+
+                    'repeatCount="indefinite" '+
+        '/>';
+		polig1 =polig1+'</svg> ';$('body').append(polig1);	
+		}	
+	 polig=polig+1;
+	}
 	
+	alert(polig1);	 
+ }
+ 
+ </script>
+<div class="grid">  
+
+		<div id=rajz>
+			 <button  class="btn-vonal_rajz" onclick="polig_rajz()" ;>Hex!</button>  
+		</div>
+  
+</div>	
 
 </body>
 
