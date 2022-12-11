@@ -16,7 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@openfonts/exo-2_latin": "^1.44.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "iso-8859-2": "^1.0.0",
     "pug": "^2.0.4",
     "utf8": "^3.0.0"
